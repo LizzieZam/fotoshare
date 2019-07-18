@@ -34,17 +34,7 @@ class edicionC extends Controller
 
     function compartir($id){ 
         $img=\App\picture::find($id);
-        /*switch($red){
-            case 1://facebook
-                return "Usted ha compartido la imagen :".$img['name']." en Facebook";
-            break;
-            case 2://instagram
-                return "Usted ha compartido la imagen :".$img['name']." en Instagram";
-            break;
-            case 3://whatsapp
-                return "Usted ha compartido la imagen :".$img['name']." en Whatsapp";
-            break;
-        }*/
+        
         
         return view('pages.compartir',compact('img'));
     }
@@ -57,7 +47,7 @@ class edicionC extends Controller
         $images=\App\picture::all();
        
         return $images;
-        //return view('pages.galeria',compact('images'));
+      
     }
 
     
