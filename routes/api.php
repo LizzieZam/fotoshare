@@ -24,4 +24,5 @@ Route::get('imagen', 'edicionC@index');
 Route::get('imagen/{id}/{red}/', 'edicionC@compartir');
 Route::get('imagen/{id}/', 'edicionC@editarVista');
 Route::post('imagen/{id}', 'edicionC@editar');
+Route::post('imagen', 'edicionC@store');
 

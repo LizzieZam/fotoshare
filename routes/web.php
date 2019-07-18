@@ -13,10 +13,10 @@ header('Access-Control-Allow-Headers:Content-Type,X-Auth-Token,Origin,Authorizat
 |
 */
 
-Route::get('/imagenc/{id}', 'edicionC@compartir')->name('share');
+/*Route::get('/imagenc/{id}', 'edicionC@compartir')->name('share');
 Route::get('/', 'edicionC@index');
 Route::get('/crea', 'edicionC@imagen');
 Route::get('/imagen/{id}/', 'edicionC@editarVista')->name('edit');
 Route::post('imagen/{id}', 'edicionC@editar');
 Route::post('imagen', 'edicionC@store')->name('create');
-
+*/
