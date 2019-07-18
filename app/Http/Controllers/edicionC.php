@@ -21,12 +21,12 @@ class edicionC extends Controller
     public function editar(Request $request,$id)
     {
         $img=\App\picture::find($id);
-        $image = Image::make($img['image']);
-        $image->resize($request['medidas']['alto'],$request['medidas']['ancho']);
-     
+        $imagen= base64_decode($img['image']);
+        $imagen->resizeWidth = $request['medidas']['ancho'];
+        $imagen->resizeHeight = $request['medidas']['alto'];
         $picture = new picture();
         $picture->name = $img['name'].$img['id'];
-        $picture->image = base64_encode(file_get_contents( $image ));
+        $picture->image = base64_encode(file_get_contents( $imagen ));
         $picture->save();
         return "Imagen modificada exitosamente";
     }
