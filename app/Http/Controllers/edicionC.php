@@ -10,11 +10,10 @@ class edicionC extends Controller
 {
     public function store(Request $request)
     {
-        $picture = [];
-        $picture['name'] =  $this->random_string() . '.' . $request->file('imagen')->getClientOriginalExtension();
-        $picture['image'] =  $picture['name'];
+        $picture=[];
+        $picture['name'] =  $this->random_string() ;
         $image = $_FILES['imagen']['tmp_name'];
-        $picture['image1'] =base64_encode(file_get_contents($request->file('imagen')));
+        $picture['image'] =base64_encode(file_get_contents($request->file('imagen')));
         $row=\App\picture::create($picture);
         return "Imagen creada exitosamente";
     }
